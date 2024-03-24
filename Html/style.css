@@ -1,0 +1,92 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ceu {
+    width: 100%;
+    height: 100%;
+    background-color: #87CEEB;
+    position: relative;
+    overflow: hidden;
+}
+
+.nuvem {
+    width: 200px;
+    height: 100px;
+    background-color: #fff; 
+    border-radius: 150px 150px 150px 150px / 120px 120px 100px 100px;
+    position: absolute;
+    animation: moverNuvem linear infinite alternate;
+}
+
+.campo-pergunta {
+    width: 100%; 
+    max-width: 600px; 
+    height: 30px; 
+    font-size: 13px; 
+    text-align: start; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+@keyframes moverNuvem {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.nuvem::before,
+.nuvem::after {
+    content: '';
+    position: absolute;
+    background-color: #fff; /* Branco */
+}
+
+.nuvem::before {
+    width: 120px;
+    height: 80px;
+    border-radius: 100px 100px 100px 100px / 80px 80px 60px 60px;
+    top: -20px;
+    left: 60px;
+}
+
+.nuvem::after {
+    width: 140px;
+    height: 90px;
+    border-radius: 100px 100px 100px 100px / 70px 70px 50px 50px;
+    top: 10px;
+    left: 30px;
+}
+
+.nuvem:nth-child(1) {
+    top: 20%;
+    left: 10%;
+}
+
+
+.nuvem:nth-child(2) {
+    top: 25%;
+    left: 70%;
+}
+
+.nuvem:nth-child(3) {
+    top: 50%;
+    left: 20%;
+}
+
+.nuvem:nth-child(4) {
+    top: 65%;
+    left: 60%;
+}
+
+
